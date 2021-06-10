@@ -142,14 +142,13 @@ This is an example of how to list things you need to use the software and how to
 
 ```
 Demo FctArgs template class
-void function2Args(za::FctArgs<int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >)
+void function2Args(arg_2_is)
 First arguemnt: 100
 Second arguemnt: test 2 args
-void function3Args(za::FctArgs<int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool>)
+void function3Args(arg_3_isb)
 First arguemnt: 5
 Second arguemnt: test 3 args
 Third arguemnt: 1
-
 ```
 
 3. Back to the initial file structure configuration
