@@ -60,7 +60,7 @@ FctArgs()
 // Custom Constructor
 FctArgs(A _arg1_, B _arg2_)
                         : arg1_(_arg1_), 
-                        arg2_(_arg2_),{}
+                        arg2_(_arg2_){}
 
 
 

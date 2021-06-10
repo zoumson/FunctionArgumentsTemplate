@@ -23,7 +23,11 @@ set (CMAKE_CXX_FLAGS "-DPCL_ONLY_CORE_POINT_TYPES=ON -DNO_EXPLICIT_INSTANTIATION
 #Bring the headers
 include_directories(${PROJECT_SOURCE_DIR}/include)
 
-#Bring the source files
+#Bring the sources
+file(GLOB SOURCES_DEMO ${PROJECT_SOURCE_DIR}/src/*.cpp)
+
+#Build the executable
+add_executable(demo ${SOURCES_DEMO})
 
 
 
