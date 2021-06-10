@@ -12,8 +12,7 @@
 [![Stack Overflow][stackoverflow-shield]][stackoverflow.com/users/11175375/adam]
 [![Leetcode][leetcode-shield]][eetcode.com/Hard_Code/]
 -->
-## Detection of a car license plate in a parking lot
-![image](https://user-images.githubusercontent.com/38358621/120076768-da6dd780-c0d9-11eb-8723-8286ad1d293e.png)
+## Function arguments template 
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -55,30 +54,23 @@
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
-LPR (License Plate Recognition), also known as ANPR (Automatic Number-Plate Recognition) is an image-processing technology used to identify vehicles by their license plates.
+C functions exchange information by means of parameters and arguments. The term parameter refers to any declaration within the parentheses following the function name in a function declaration or definition; the term argument refers to any expression within the parentheses of a function call.
 
-The system uses illumination and an infrared camera to take the image of the front or rear of the vehicle, then an image-processing software analyzes the images and extracts the license plate information.
+The following rules apply to parameters and arguments of C functions:
 
-Here's why LDR is valuable:
-
-* First of all, safety: the license plate serves as a virtual ticket, and grants free-flow access, preventing stolen cars or ticket swapping. Since ticket and license plate have to match at entry and exit, it is almost impossible to pursue fraudulent behaviors. With LPR you can also easily manage black lists and be in control of all the events and movements at entrance and exit.
-
-* LPR is highly reliable: in case of lost tickets, it is easy to determine the actual entry time from the license plate number.
-
-* In addition, LPR also allows multiple integrations and customizations, especially for contract parking where the recurrent user can smoothly access and egress the car park without any titles other than the vehicle license plate.
-
-* With LPR, it is also possible to enter with a pre-paid ticket, or use cashless solutions. Another benefit offered by LPR at entries/exits is the possibility to book a parking space in advance, to ensure the driver a hassle-free experience.
-
-* Last but not least, LPR can be retrofitted and added to existing solutions.
-
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
+Except for functions with variable-length argument lists, the number of arguments in a function call must be the same as the number of parameters in the function definition. This number can be zero.
+* The maximum number of arguments (and corresponding parameters) is 253 for a single function.
+* Arguments are separated by commas. However, the comma is not an operator in this context, and the arguments can be evaluated by the compiler in any order. There is, however, a sequence point before the actual call.
+* Arguments are passed by value; that is, when a function is called, the parameter receives a copy of the argument's value, not its address. This rule applies to all scalar values, structures, and unions passed as arguments.
+* Modifying a parameter does not modify the corresponding argument passed by the function call. However, because arguments can be addresses or pointers, a function can use addresses to modify the values of variables defined in the calling function.
+* In the old style, parameters that are not explicitly declared are assigned a default type of int .
+* The scope of function parameters is the function itself. Therefore, parameters of the same name in different functions are unrelated.
 
 <!--Built with -->
 ### Built With
 
 <br>
 
-* [opencv](https://opencv.org/)
 * [cmake](https://cmake.org/)
 * [gnu](https://www.gnu.org/)
 
@@ -89,7 +81,6 @@ A list of commonly used resources that I find helpful are listed in the acknowle
 ### Folders
 
 * [include/](include/): c++ header files.
-* [resource/](resource/): xml and input images.
 * [src/](src/): c++ definitions.
 
 
@@ -100,57 +91,10 @@ A list of commonly used resources that I find helpful are listed in the acknowle
 .
 ├── CMakeLists.txt
 ├── include
-│   ├── ConstantsDetectChars.h
-│   ├── ConstantsDetectPlates.h
-│   ├── ConstantsIdentifyPlate.h
-│   ├── ConstantsPreprocess.h
-│   ├── DetectChars.h
-│   ├── DetectPlates.h
-│   ├── IdentifyPlate.h
-│   ├── PossibleChar.h
-│   ├── PossiblePlate.h
-│   ├── Preprocess.h
-│   └── ShowLicensePlateArgs.h
+│   └── FctArgs.h
 ├── README.md
-├── ressource
-│   ├── image
-│   │   ├── image10.png
-│   │   ├── image11.png
-│   │   ├── image12.png
-│   │   ├── image13.png
-│   │   ├── image14.png
-│   │   ├── image15.png
-│   │   ├── image16.png
-│   │   ├── image1.png
-│   │   ├── image2.png
-│   │   ├── image3.png
-│   │   ├── image4.png
-│   │   ├── image5.png
-│   │   ├── image6.png
-│   │   ├── image7.png
-│   │   ├── image8.png
-│   │   ├── image9.png
-│   │   ├── imgOriginalScene.png
-│   │   ├── test2.png
-│   │   └── test.png
-│   └── xml
-│       ├── classifications.xml
-│       └── images.xml
 └── src
-    ├── demo
-    │   ├── CMakeLists.txt
-    │   └── Demo.cpp
-    └── lib
-        ├── CMakeLists.txt
-        └── plate
-            ├── DetectChars.cpp
-            ├── DetectPlates.cpp
-            ├── IdentifyPlate.cpp
-            ├── PossibleChar.cpp
-            ├── PossiblePlate.cpp
-            └── Preprocess.cpp
-
-8 directories, 43 files
+    └── Demo.cpp
 
 ```
 
@@ -158,7 +102,7 @@ A list of commonly used resources that I find helpful are listed in the acknowle
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is a sample code of how you may detect a license plate on a image.
+This is a sample code of how you may regroup a function arguments in a class.
 To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
@@ -168,91 +112,49 @@ This is an example of how to list things you need to use the software and how to
   ```sh
   sudo apt-get install cmake
   ```
- * CPP standard: `CMAKE_CXX_STANDARD 17`
- * [Install](https://askubuntu.com/questions/342202/failed-to-load-module-canberra-gtk-module-but-already-installed) `gtk` and `gtk3` module to access `canberra-gtk-module` used by `opencv imshow`
- 
-  ```sh
-  sudo apt install libcanberra-gtk-module libcanberra-gtk3-module
-  ```
 
 ### Installation
 
-1. Install first `opencv4` cpp libraries at [https://opencv.org/](https://opencv.org/)
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/zoumson/LicensePlateDetection.git
+   git clone https://github.com/zoumson/FunctionArgumentsTemplate.git
    ```
-3. Go to the project directory source
+2. Go to the project directory source
    ```sh
-   cd LicensePlateDetection
+   cd FunctionArgumentsTemplate
    ```
-4. Create empty directories `build`, `lib` and `bin`
+3. Create empty directories `build`,  and `bin`
    ```sh
-   mkdir build && mkdir lib && mkdir bin && mkdir result && cd result && mkdir image && cd ..
+   mkdir build &&  mkdir bin 
    ```
-5. Generate the library `libplate.so` and move it to `lib` and the exectutable `demo` and move it to `bin`
+5. Generate the exectutable `demo` and move it to `bin`
    ```sh
    cd build && cmake .. && make && cd ..
    ```
-6. Install the library `libplate.so` to `/usr/lib` 
-   ```sh
-   cd build && sudo make install && cd ..
-   ```   
+
 <!-- USAGE EXAMPLES -->
 ### Usage
-1. Command line arguments
-<br>
+1. run 
+   ```sh
+   ./bin/demo
+   ```
+2. Output
 
 ```
-Car license plate detection
-Usage: demo [params] 
-
-        -?, -h, --help, --usage (value:true)
-                show help message
-        -c, --classifier (value:./ressource/xml/classifications.xml)
-                input classifier path
-        --ext, -n (value:png)
-                save image detected with detected plate extension
-        -i, --image (value:<none>)
-                input image path
-        --name, -p (value:image)
-                save image detected with detected plate name
-        -p, --path (value:./result/image/)
-                save image detected with detected plate path
-        -s, --show (value:false)
-                show detection steps
-        --save, -v (value:false)
-                save image with detected plate
-        -t, --train (value:./ressource/xml/images.xml)
-                input trained images path
+Demo FctArgs template class
+void function2Args(za::FctArgs<int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >)
+First arguemnt: 100
+Second arguemnt: test 2 args
+void function3Args(za::FctArgs<int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool>)
+First arguemnt: 5
+Second arguemnt: test 3 args
+Third arguemnt: 1
 
 ```
 
-<br>
-
-2. Run with an image in `./ressource/image`
-```
-./bin/demo -i=./ressource/image/image6.png -v=true
-```
-
-<br>
-
-## Before detection
-
- ![image6](https://user-images.githubusercontent.com/38358621/120063777-7cba9a80-c09b-11eb-8e14-82b2323ecd44.png)
- 
- <br>
- 
-## After detection: image saved as `image_29_05_2021_16_25_27`
-
-![image_29_05_2021_16_25_27](https://user-images.githubusercontent.com/38358621/120063750-4bda6580-c09b-11eb-8b9b-394f082a73a5.png)
-
-<br>
-
-## License plate number `NYSJ`
 3. Back to the initial file structure configuration
    ```sh
-   rm -r bin build lib result 
+   rm -r bin build 
    ```
 <!-- ROADMAP -->
 ## Roadmap
@@ -284,7 +186,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Adama Zouma - <!-- [@your_twitter](https://twitter.com/your_username) -->- stargue49@gmail.com
 
-Project Link: [https://github.com/zoumson/LicensePlateDetection](https://github.com/zoumson/LicensePlateDetection.git)
+Project Link: [https://github.com/zoumson/FunctionArgumentsTemplate](https://github.com/zoumson/FunctionArgumentsTemplate.git)
 
 
 
