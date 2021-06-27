@@ -67,7 +67,7 @@ Except for functions with variable-length argument lists, the number of argument
 * In the old style, parameters that are not explicitly declared are assigned a default type of int .
 * The scope of function parameters is the function itself. Therefore, parameters of the same name in different functions are unrelated.
 
-This project focus on regrouping the set of a arguments(over 253 parameters can be processed) of a function in a *nutshell*, let's say `all`, then assign each argument its value respectively as `all.arg1=..; all.arg2=..; all.arg3=..; ...all.arg.argn=..;` within the function body/scope. 
+This project focus on regrouping the set of a arguments(over 253 parameters can be processed) of a function in a *nutshell*, let's say `all`, then assign each argument its value respectively as `all.arg1=..; all.arg2=..; all.arg3=..; ...all.argn=..;` within the function body/scope. 
 
 <!--Built with -->
 ### Built With
