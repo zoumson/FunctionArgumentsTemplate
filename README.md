@@ -54,7 +54,7 @@
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
-C functions exchange information by means of parameters and arguments. The term parameter refers to any declaration within the parentheses following the function name in a function declaration or definition; the term argument refers to any expression within the parentheses of a function call.
+C++ functions exchange information by means of parameters and arguments. The term parameter refers to any declaration within the parentheses following the function name in a function declaration or definition; the term argument refers to any expression within the parentheses of a function call.
 
 The following rules apply to parameters and arguments of C functions:
 
