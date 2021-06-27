@@ -66,6 +66,7 @@ Except for functions with variable-length argument lists, the number of argument
 * Modifying a parameter does not modify the corresponding argument passed by the function call. However, because arguments can be addresses or pointers, a function can use addresses to modify the values of variables defined in the calling function.
 * In the old style, parameters that are not explicitly declared are assigned a default type of int .
 * The scope of function parameters is the function itself. Therefore, parameters of the same name in different functions are unrelated.
+
 This project focus on regrouping the set of a arguments(over 253 parameters can be processed) of a function in a *nutshell*, let's say `all`, then assign each argument its value respectively as `all.arg1=..; all.arg2=..; all.arg3=..; ...all.arg.argn=..;` within the function body/scope. 
 
 <!--Built with -->
