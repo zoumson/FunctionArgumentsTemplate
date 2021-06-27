@@ -12,7 +12,8 @@
 [![Stack Overflow][stackoverflow-shield]][stackoverflow.com/users/11175375/adam]
 [![Leetcode][leetcode-shield]][eetcode.com/Hard_Code/]
 -->
-## Function arguments template 
+## Function Arguments Template 
+![ParametersReturn](https://user-images.githubusercontent.com/38358621/123541183-bacbdc80-d775-11eb-9797-23bb862473d1.png)
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -61,10 +62,11 @@ The following rules apply to parameters and arguments of C functions:
 Except for functions with variable-length argument lists, the number of arguments in a function call must be the same as the number of parameters in the function definition. This number can be zero.
 * The maximum number of arguments (and corresponding parameters) is 253 for a single function.
 * Arguments are separated by commas. However, the comma is not an operator in this context, and the arguments can be evaluated by the compiler in any order. There is, however, a sequence point before the actual call.
-* Arguments are passed by value; that is, when a function is called, the parameter receives a copy of the argument's value, not its address. This rule applies to all scalar values, structures, and unions passed as arguments.
+* Arguments are passed by value; that is, when a function is called, the parameter receives a copy of the argument's value, not its address. This rule applies to all scalar values, structures, and unions passed as arguments.`move` contructor can help reduce the duplication if the argument value is used only once. 
 * Modifying a parameter does not modify the corresponding argument passed by the function call. However, because arguments can be addresses or pointers, a function can use addresses to modify the values of variables defined in the calling function.
 * In the old style, parameters that are not explicitly declared are assigned a default type of int .
 * The scope of function parameters is the function itself. Therefore, parameters of the same name in different functions are unrelated.
+This project focus on regrouping the set of a arguments(over 253 parameters can be processed) of a function in a *nutshell*, let's say `all`, then assign each argument its value respectively as `all.arg1=..; all.arg2=..; all.arg3=..; ...all.arg.argn=..;` within the function body/scope. 
 
 <!--Built with -->
 ### Built With
