@@ -57,7 +57,7 @@
 
 C++ functions exchange information by means of parameters and arguments. The term parameter refers to any declaration within the parentheses following the function name in a function declaration or definition; the term argument refers to any expression within the parentheses of a function call.
 
-The following rules apply to parameters and arguments of C functions:
+The following rules apply to parameters and arguments of C++ functions:
 
 Except for functions with variable-length argument lists, the number of arguments in a function call must be the same as the number of parameters in the function definition. This number can be zero.
 * The maximum number of arguments (and corresponding parameters) is 253 for a single function.
